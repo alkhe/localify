@@ -6,7 +6,7 @@ Localify allows you to run arbitrary code with the shallow properties of the obj
 
 Node
 ```js
-var localify = require('./localify');
+var localify = require('localify');
 ```
 
 Common

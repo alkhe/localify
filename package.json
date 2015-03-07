@@ -1,8 +1,8 @@
 {
   "name": "localify",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Run code in the scope of an object.",
-  "main": "localify.j",
+  "main": "localify.js",
   "scripts": {
     "test": "test"
   },

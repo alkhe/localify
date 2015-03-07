@@ -1,0 +1,26 @@
+{
+  "name": "localify",
+  "version": "0.1.0",
+  "description": "Run code in the scope of an object.",
+  "main": "localify.j",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edge/localify"
+  },
+  "keywords": [
+    "localify",
+    "contextify",
+    "local",
+    "scope",
+    "context"
+  ],
+  "author": "synchronous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edge/localify/issues"
+  },
+  "homepage": "https://github.com/edge/localify"
+}

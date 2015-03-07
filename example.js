@@ -1,4 +1,4 @@
-var contextify = require('./contextify').contextify;
+var local = require('./localify');
 
 var obj = {
 	a: 5,
@@ -16,5 +16,5 @@ var obj = {
 	}, 6, 7]
 };
 
-eval(contextify(obj));
+eval(local.context(obj));
 console.log(a, b, c, d, e, f(), g);

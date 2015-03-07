@@ -18,3 +18,5 @@ var obj = {
 
 eval(local.context(obj));
 console.log(a, b, c, d, e, f(), g);
+
+console.log(local.serialize(obj));

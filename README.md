@@ -1,6 +1,6 @@
 # localify
 
-Localify allows you to run arbitrary code with the shallow properties of the object copied into the scope. It can be thought of as a `with` statement that copies the object.
+Localify allows you to run arbitrary code with the shallow properties of the object copied into the scope. It can be thought of as a `with` statement that copies the object. It runs very similarly to node's vm module, but works for the browser. This solution is much more efficient than vm-browserify's iframe method.
 
 ## VM
 
@@ -53,7 +53,7 @@ vm(function() {
 This is the legacy version with the previous functionality, which also provides a serialize function, similar to JSON.stringify, but also parses functions.
 
 ```js
-var local = require('localify').legacy;
+var local = VM.legacy;
 ```
 
 ## Context

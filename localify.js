@@ -1,4 +1,4 @@
-module.exports = function(o) {
+var VM = module.exports = function(o) {
 	eval((function() {
 		var src = '';
 		for (var prop in o) {

@@ -1,3 +1,18 @@
+module.exports = function(o) {
+	eval((function() {
+		var src = '';
+		for (var prop in o) {
+			if (o.hasOwnProperty(prop)) {
+				src += 'var ' + prop + '=o[\'' + prop + '\'];';
+			}
+		}
+		return src;
+	})());
+	return function() {
+		return arguments[0] instanceof Function ? arguments[0]() : eval(arguments[0]);
+	}
+};
+
 {
 	var serialize = function(o) {
 		var str = '';
@@ -59,7 +74,7 @@
 		return str;
 	};
 
-	var localify = module.exports = {
+	module.exports.legacy = {
 		context: toSource,
 		serialize: serialize
 	};

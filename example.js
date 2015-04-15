@@ -1,4 +1,5 @@
-var local = require('./localify');
+var VM = require('./'),
+	local = VM.legacy;
 
 var obj = {
 	a: 5,
@@ -19,4 +20,10 @@ var obj = {
 eval(local.context(obj));
 console.log(a, b, c, d, e, f(), g);
 
-console.log(local.serialize(obj));
+var vm = new VM(obj);
+
+console.log(vm('a'), vm('b'), vm('c'), vm('d'), vm('e'), vm('f()'), vm('g'));
+vm('console.log(a, b, c, d, e, f(), g)');
+vm(function() {
+	console.log(a, b, c, d, e, f(), g);
+});
